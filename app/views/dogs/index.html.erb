@@ -1,0 +1,15 @@
+<h1>Favorite Dogs</h1>
+
+<form action="/" method="post">
+  <input type="text" name="name" placeholder="name">
+  <input type="text" name="breed" placeholder="breed">
+  <input type="submit" value="Submit">
+</form>
+
+<ul>
+  <li>
+    <%= @dogs.each do |dog| %>
+    <li><a href="/dogs/<%= dog.id %>"><%= dog.name %> <%=  dog.breed %></a></li>
+    <% end %>
+  </li>
+</ul>
