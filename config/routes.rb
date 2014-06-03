@@ -6,15 +6,6 @@ Rails.application.routes.draw do
   get '/dogs/:id',    to: 'dogs#show'
   get '/dogs/:id/edit', to: 'dogs#edit'
   put '/dogs/:id', to: 'dogs#update'
-
-
-
-  # get '/',              to: 'cities#index'
-  # get '/new',           to: 'cities#new'
-  # post '/',             to: 'cities#create'
-  # get '/cities/:id',    to: 'cities#show'
-  # get '/cities/:id/edit', to: 'cities#edit'
-  # put '/cities/:id', to: 'cities#update'
-  # delete '/cities/:id', to: 'cities#delete'
+  delete '/dogs/:id', to: 'dogs#delete'
 
 end

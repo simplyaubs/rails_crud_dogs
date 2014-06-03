@@ -33,5 +33,14 @@ feature 'CRUD favorite Dogs' do
     expect(page).to_not have_content 'Poodle'
   end
 
+  scenario 'delete a dog' do
+    visit '/'
+    fill_in 'name', with: 'Fido'
+    fill_in 'breed', with: 'Poodle'
+    click_on 'Submit'
+    click_on 'Fido'
+    click_on 'Delete Dog'
+    expect(page).to_not have_content 'Fido'
+  end
 
 end

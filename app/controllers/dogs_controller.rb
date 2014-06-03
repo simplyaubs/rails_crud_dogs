@@ -31,6 +31,11 @@ class DogsController < ApplicationController
     redirect_to '/'
   end
 
+  def delete
+    @dog = Dog.destroy(params[:id])
+    redirect_to '/'
+  end
+
 end
 
 
